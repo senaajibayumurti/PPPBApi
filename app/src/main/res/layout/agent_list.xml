@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:background="@drawable/valorant_selection_background">
+    <ImageView
+        android:layout_width="96sp"
+        android:layout_height="96sp"
+
+        android:id="@+id/agent_icon_img"
+        android:src="@drawable/valorant_background"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+
+        android:id="@+id/agent_credentials_lv"
+
+        app:layout_constraintStart_toEndOf="@id/agent_icon_img"
+        app:layout_constraintTop_toTopOf="@id/agent_icon_img"
+        app:layout_constraintBottom_toBottomOf="@id/agent_icon_img">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/agent_role_txt"
+            android:text="AGENT ROLE"
+            android:textSize="16sp"
+            android:fontFamily="@font/din_bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/agent_name_txt"
+            android:text="AGENT NAME"
+            android:textSize="48sp"
+            android:fontFamily="@font/tungsten_bold"
+            android:textColor="@color/yellow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:layout_marginEnd="24dp"
+
+        android:id="@+id/agent_role_img"
+        android:src="@drawable/valorant_background"
+
+        app:layout_constraintBottom_toBottomOf="@id/agent_icon_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/agent_icon_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

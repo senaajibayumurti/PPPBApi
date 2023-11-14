@@ -1,8 +1,8 @@
-package com.example.pertemuan11.model
+package com.example.pppbapi.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Users (
+data class Agents (
     @SerializedName("data")
-    val data: List<Data>
+    val data: List<AgentData>
     )

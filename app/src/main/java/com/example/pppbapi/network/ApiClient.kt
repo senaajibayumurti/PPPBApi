@@ -1,4 +1,4 @@
-package com.example.pertemuan11.network
+package com.example.pppbapi.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,7 +13,7 @@ object ApiClient {
             .Builder().addInterceptor(mOkHttpInterceptor)
             .build()
         val builder = Retrofit.Builder()
-            .baseUrl("https://dummy.restapiexample.com/api/v1/")
+            .baseUrl("https://valorant-api.com/v1/")
             .client(mOkHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
