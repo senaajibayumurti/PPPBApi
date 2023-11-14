@@ -17,8 +17,8 @@
     <color name="gray">#373737</color>
 
     <color name="highlighted_label">#E4E4E4</color>
-    <color name="higlighted">#809C9C9C</color>
-    <color name="unhighlight">#339C9C9C</color>
+    <color name="higlighted">#80FFFFFF</color>
+    <color name="unhighlight">#33FFFFFF</color>
 
     <color name="bg_1">#3C7B86</color>
     <color name="bg_2">#39485E</color>

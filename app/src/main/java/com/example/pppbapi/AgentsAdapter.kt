@@ -1,15 +1,18 @@
 package com.example.pppbapi;
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pppbapi.databinding.AgentListBinding
+import com.example.pppbapi.model.Abilities
 import com.example.pppbapi.model.AgentData;
 
 typealias onClickAgent = (AgentData) -> Unit
 
 class AgentsAdapter ( private val listAgentData: List<AgentData>,
+                      private val listAbilities: List<Abilities>,
                       private val onClickAgent: onClickAgent)   :
     RecyclerView.Adapter<AgentsAdapter.AgentDataViewHolder>(){
 
@@ -17,10 +20,13 @@ class AgentsAdapter ( private val listAgentData: List<AgentData>,
             RecyclerView.ViewHolder(binding.root){
                 fun bind(data: AgentData){
                     with(binding){
-                        agentNameTxt.text = data.agentName
+                        agentNameTxt.text = data.agentName.uppercase()
+//                        agentRoleTxt.text = data.agentAbilities[0].abilityName
                         agentRoleTxt.text = data.agentRole.roleName
                         addAgentIcon(data.agentIcon)
                         addRoleIcon(data.agentRole.roleIcon)
+
+                        Log.d("Cek Adapter","Agent Name ${agentNameTxt.text}")
 
                         itemView.setOnClickListener{
                             onClickAgent(data)
